@@ -13,10 +13,10 @@ output "bastion_public_instance_ip" {
 
 #private_instance_ids
 output "private_instance_ids" {
-  value = [ for each in module.ec2_private: each.id]
+  value = [for each in module.ec2_private : each.id]
 }
 
 # private_instance_ips
 output "private_instance_ips" {
-  value = [ for each in module.ec2_private: each.public_ip]
+  value = [for each in module.ec2_private : each.public_ip]
 }
